@@ -55,6 +55,9 @@ public class BinarySearchTree {
             }
 
         }
+
+        numNodes++;
+
     }
 
     public boolean contains(E value) {
@@ -116,11 +119,11 @@ public class BinarySearchTree {
     }
 
     public int countNodes() {
-
+        return numNodes;
     }
 
     public int countLeafNodes() {
-
+        
     }
 
     public int getHeight() {
