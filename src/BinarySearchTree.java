@@ -12,6 +12,8 @@ public class BinarySearchTree {
         if (numNodes == 0) {
            root = val;
         } else {
+
+            //starts at root
             TreeNode<Integer> current = root;
 
             boolean loop = true;
@@ -56,6 +58,61 @@ public class BinarySearchTree {
     }
 
     public boolean contains(E value) {
+        
+            //starts at root
+            TreeNode<Integer> current = root;
+
+            boolean loop = true;
+            while (loop) {
+
+                //tests if the value goes to the left or right of 'current'
+                if (value > current.getValue()) {
+
+                    //if the child is null simply return false
+                    if (current.getLeftChild() == null) {
+
+                        loop = false;
+                        return false;
+
+                    //if the left child value is occupied, test if it is value
+                    }else if(current.getLeftChild().getValue() == value) {
+
+                        loop = false;
+                        return true;
+                    
+                    //if nothing is found then continue
+                    } else {
+
+                        current = current.getLeftChild();
+
+                    }
+
+                } else {
+
+                  
+                    //if the child is null simply return false
+                    if (current.getRightChild() == null) {
+
+                        loop = false;
+                        return false;
+
+                    //if the right child value is occupied, test if it is value
+                    }else if(current.getRightChild().getValue() == value) {
+
+                        loop = false;
+                        return true;
+                    
+                    //if nothing is found then continue
+                    } else {
+
+                        current = current.getRightChild();
+
+                    }
+
+                }
+
+            }
+
     }
 
     public int countNodes() {
