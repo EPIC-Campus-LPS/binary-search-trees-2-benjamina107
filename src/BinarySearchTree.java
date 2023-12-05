@@ -1,10 +1,18 @@
 import com.sun.source.tree.Tree;
 
+/**
+ * A class representing a binary tree
+ */
 public class BinarySearchTree {
 
     private TreeNode<Integer> root =;
     private int numNodes = 0;
 
+    /**
+     * Adds an item to the binary search tree
+     * 
+     * @param value the value to be added
+     */
     public void add(Integer value) {
 
         TreeNode<Integer> val = new TreeNode<Integer>(value, null, null);
@@ -60,6 +68,11 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Adds a pre-existing node to the binary search tree (Helper method for delete)
+     * 
+     * @param val the node to be added
+     */
     public void addNode(TreeNode<Integer> val) {
 
         if (numNodes == 0) {
@@ -113,7 +126,17 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Tests if the tree contains a specific value
+     * 
+     * @param value the value to be tested for
+     * @return true or false of whether the value is there or not
+     */
     public boolean contains(E value) {
+
+                if (numNodes = 0) {
+                    return false;
+                }       
         
             //starts at root
             TreeNode<Integer> current = root;
@@ -171,10 +194,20 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Tells you how many nodes are in the tree
+     * 
+     * @return the amount of nodes in the tree
+     */
     public int countNodes() {
         return numNodes;
     }
 
+    /**
+     * Counts the amount of child-less nodes in the tree
+     * 
+     * @return the amount of child nodes
+     */
     public int countLeafNodes() {
 
         if (numNodes = 0) {
@@ -185,6 +218,12 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Recursive helper method for countLeafNodes
+     * 
+     * @param rt the node in question
+     * @return the amount of leaf nodes at current point in counting
+     */
     public int countLeafNodesHelper(TreeNode<Integer> rt) {
         //count of leaf nodes to be returned
         int count = 0;
@@ -216,6 +255,11 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Tells you the height of the tree
+     * 
+     * @return the height of the tree
+     */
     public int getHeight() {
         
         if (numNodes = 0) {
@@ -226,6 +270,13 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Recursive helper method for getHeight
+     * 
+     * @param rt the node in question
+     * @param depth the depth at current point in counting
+     * @return the depth at current point in counting
+     */
     public int heightHelper(TreeNode<Integer> rt, depth) {
 
         //to compare which is the biggest, left or right
@@ -263,12 +314,20 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Prints the inorder traversed tree
+     */
     public void printInorder() {
 
         helpInorder(root)
 
     }
 
+    /**
+     * Recursively prints in ineorder the amount of items in the tree (Helper method for printInorder)
+     * 
+     * @param rt the current node
+     */
     public void helpInorder(TreeNode<Integer> rt) {
 
         //if it is null, finish without printing
@@ -283,12 +342,20 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Prints the preorder traversed tree
+     */
     public void printPreorder() {
 
         helpPreorder(root)
 
     }
 
+    /**
+     * Recursively prints in preorder the amount of items in the tree (Helper method for printPreorder)
+     * 
+     * @param rt the current node
+     */
     public void helpPreorder(TreeNode<Integer> rt) {
 
         //if it is null, finish without printing
@@ -303,12 +370,20 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Prints the postorder traversed tree
+     */
     public void printPostorder() {
 
         helpPostorder(root);
 
     }
 
+    /**
+     * Recursively prints in postorder the amount of items in the tree (Helper method for printPostorder)
+     * 
+     * @param rt the current node
+     */
     public void helpPostorder(TreeNode<Integer> rt) {
 
         //if it is null, finish without printing
@@ -323,7 +398,17 @@ public class BinarySearchTree {
 
     }
 
+   /**
+     * Deletes an item in the tree
+     * 
+     * @param value the value to be found and deleted
+     * @return the item that was deleted, null if nonexistent
+     */
     public E delete(E value) {
+
+        if (numNodes = 0) {
+            return null;
+        }
 
         //starts at root
         TreeNode<Integer> current = root;
