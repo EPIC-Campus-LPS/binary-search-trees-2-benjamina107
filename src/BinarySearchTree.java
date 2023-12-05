@@ -60,6 +60,59 @@ public class BinarySearchTree {
 
     }
 
+    public void addNode(TreeNode<Integer> val) {
+
+        if (numNodes == 0) {
+           root = val;
+        } else {
+
+            //starts at root
+            TreeNode<Integer> current = root;
+
+            boolean loop = true;
+            while (loop) {
+
+                //tests if the value goes to the left or right of 'current'
+                if (value > current.getValue()) {
+
+                    //if the left child value is empty, set it as the new value
+                    if (current.getLeftChild() != null) {
+
+                        current.setLeftChild(val);
+                        loop = false;
+
+                    //if the left child value is occupied, make that the new 'current'
+                    } else {
+
+                        current = current.getLeftChild();
+
+                    }
+
+                } else {
+
+                    //if the right child value is empty, set it as the new value
+                    if (current.getRightChild() != null) {
+
+                        current.setRightChild(val);
+                        loop = false;
+
+                    //if the right child value is occupied, make that the new 'current'
+                    } else {
+
+                        current = current.getRightChild();
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        numNodes++;
+
+    }
+
     public boolean contains(E value) {
         
             //starts at root
@@ -212,17 +265,175 @@ public class BinarySearchTree {
 
     public void printInorder() {
 
+        helpInorder(root)
+
+    }
+
+    public void helpInorder(TreeNode<Integer> rt) {
+
+        //if it is null, finish without printing
+        if (!(rt == null)) {
+
+            //left, root, right
+            printInorder(rt.getLeftChild());
+            System.out.println(rt.getValue() + ", ");
+            printInorder(rt.getRightChild());
+
+        }
+
     }
 
     public void printPreorder() {
+
+        helpPreorder(root)
+
+    }
+
+    public void helpPreorder(TreeNode<Integer> rt) {
+
+        //if it is null, finish without printing
+        if (!(rt == null)) {
+
+            //root, left, right
+            System.out.println(rt.getValue() + ", ");
+            printInorder(rt.getLeftChild());
+            printInorder(rt.getRightChild());
+
+        }
 
     }
 
     public void printPostorder() {
 
+        helpPostorder(root);
+
+    }
+
+    public void helpPostorder(TreeNode<Integer> rt) {
+
+        //if it is null, finish without printing
+        if (!(rt == null)) {
+
+            //left, right, root
+            printInorder(rt.getLeftChild());
+            printInorder(rt.getRightChild());
+            System.out.println(rt.getValue() + ", ");
+
+        }
+
     }
 
     public E delete(E value) {
+
+        //starts at root
+        TreeNode<Integer> current = root;
+
+        //parent of node to be deleted, to reattach the tree
+        TreeNode<Integer> delParent;
+
+        boolean loop = true;
+        while (loop) {
+
+            //tests if the value goes to the left or right of 'current'
+            if (value > current.getValue()) {
+
+                //if the child is null simply return null
+                if (current.getLeftChild() == null) {
+
+                    loop = false;
+                    return null;
+
+                //if the left child value is occupied, test if it is value, once found delete
+                }else if(current.getLeftChild().getValue() == value) {
+
+                    loop == false;
+                    delParent = current;
+                    del = current.getLeftChild();
+                    
+                    //if its a leaf node, delete it
+                    if(del.getRightChild == null && del.getLeftChild == null) {
+                    
+                        delParent.setLeftChild(null);
+
+                    //if there is only one child, replace with child
+                    } else if(del.getRightChild == null) {
+
+                        delParent.setLeftChild(del.getLeftChild);
+
+                    } else if(del.getLeftChild == null) {
+
+                        delParent.setLeftChild(del.getRightChild);
+
+                    //only other case is if the left node is there still
+                    } else {
+                        //replace del with left child and reinsert right child
+                        delParent.setLeftChild(del.getLeftChild)
+                        addNode(del.getRightChild)
+
+                    }
+                    numNodes--;
+                    return del.getValue;
+                
+                //if nothing is found then continue
+                } else {
+
+                    current = current.getLeftChild();
+
+                }
+
+            } else {
+
+            
+                //if the child is null simply return null
+                if (current.getRightChild() == null) {
+
+                    loop = false;
+                    return null;
+
+                //if the right child value is occupied, test if it is value, once found delete
+                }else if(current.getRightChild().getValue() == value) {
+
+                    loop == false;
+                    delParent = current;
+                    del = current.getRightChild();
+                    
+                    //if its a leaf node, delete it
+                    if(del.getRightChild == null && del.getLeftChild == null) {
+                    
+                        delParent.setRightChild(null);
+
+                    //if there is only one child, replace with child
+                    } else if(del.getRightChild == null) {
+
+                        delParent.setRightChild(del.getLeftChild);
+
+                    } else if(del.getLeftChild == null) {
+
+                        delParent.setRightChild(del.getRightChild);
+
+                    //only other case is if the left node is there still
+                    } else {
+                        //replace del with left child and reinsert right child
+                        delParent.setRightChild(del.getLeftChild)
+                        addNode(del.getRightChild)
+
+                    }
+                    numNodes--;
+                    return del.getValue;
+
+                //if nothing is found then continue
+                } else {
+
+                    current = current.getRightChild();
+
+                }
+
+            }
+
+        }
+
+        
+
 
     }
 }
