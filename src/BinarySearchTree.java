@@ -3,9 +3,9 @@ import com.sun.source.tree.Tree;
 /**
  * A class representing a binary tree
  */
-public class BinarySearchTree {
+public class BinarySearchTree<E> {
 
-    private TreeNode<Integer> root =;
+    private TreeNode<Integer> root;
     private int numNodes = 0;
 
     /**
@@ -31,30 +31,30 @@ public class BinarySearchTree {
                 if (value > current.getValue()) {
 
                     //if the left child value is empty, set it as the new value
-                    if (current.getLeftChild() != null) {
+                    if (current.getRightChild() == null) {
 
-                        current.setLeftChild(val);
+                        current.setRightChild(val);
                         loop = false;
 
                     //if the left child value is occupied, make that the new 'current'
                     } else {
 
-                        current = current.getLeftChild();
+                        current = current.getRightChild();
 
                     }
 
                 } else {
 
                     //if the right child value is empty, set it as the new value
-                    if (current.getRightChild() != null) {
+                    if (current.getLeftChild() == null) {
 
-                        current.setRightChild(val);
+                        current.setLeftChild(val);
                         loop = false;
 
                     //if the right child value is occupied, make that the new 'current'
                     } else {
 
-                        current = current.getRightChild();
+                        current = current.getLeftChild();
 
                     }
 
@@ -86,33 +86,33 @@ public class BinarySearchTree {
             while (loop) {
 
                 //tests if the value goes to the left or right of 'current'
-                if (value > current.getValue()) {
+                if (val.getValue() > current.getValue()) {
 
                     //if the left child value is empty, set it as the new value
-                    if (current.getLeftChild() != null) {
+                    if (current.getRightChild() == null) {
 
-                        current.setLeftChild(val);
+                        current.setRightChild(val);
                         loop = false;
 
                     //if the left child value is occupied, make that the new 'current'
                     } else {
 
-                        current = current.getLeftChild();
+                        current = current.getRightChild();
 
                     }
 
                 } else {
 
                     //if the right child value is empty, set it as the new value
-                    if (current.getRightChild() != null) {
+                    if (current.getLeftChild() == null) {
 
-                        current.setRightChild(val);
+                        current.setLeftChild(val);
                         loop = false;
 
                     //if the right child value is occupied, make that the new 'current'
                     } else {
 
-                        current = current.getRightChild();
+                        current = current.getLeftChild();
 
                     }
 
@@ -132,9 +132,9 @@ public class BinarySearchTree {
      * @param value the value to be tested for
      * @return true or false of whether the value is there or not
      */
-    public boolean contains(E value) {
+    public boolean contains(int value) {
 
-                if (numNodes = 0) {
+                if (numNodes == 0) {
                     return false;
                 }       
         
@@ -145,7 +145,7 @@ public class BinarySearchTree {
             while (loop) {
 
                 //tests if the value goes to the left or right of 'current'
-                if (value > current.getValue()) {
+                if (value <= current.getValue()) {
 
                     //if the child is null simply return false
                     if (current.getLeftChild() == null) {
@@ -191,7 +191,7 @@ public class BinarySearchTree {
                 }
 
             }
-
+        return false;
     }
 
     /**
@@ -210,11 +210,11 @@ public class BinarySearchTree {
      */
     public int countLeafNodes() {
 
-        if (numNodes = 0) {
+        if (numNodes == 0) {
             return -1;
         }
 
-        return countLeafNodesHelper(root)
+        return countLeafNodesHelper(root);
 
     }
 
@@ -228,25 +228,25 @@ public class BinarySearchTree {
         //count of leaf nodes to be returned
         int count = 0;
 
-        if(rt.getLeftChild == null && rt.getRightChild == null) {
+        if(rt.getLeftChild() == null && rt.getRightChild() == null) {
             // if you get to a leaf node, return with 1 to represent the 1 leaf node you just found
             return 1;
 
         }
     
         //if there's a child on the left
-        if(rt.getLeftChild != null) {
+        if(rt.getLeftChild() != null) {
 
             //add count result from next left node to this count
-            count += countLeafNodesHelper(rt.getLeftChild)
+            count += countLeafNodesHelper(rt.getLeftChild());
 
         }
 
         //if there's a child on the right
-        if(rt.getRightChild != null) {
+        if(rt.getRightChild() != null) {
 
             //add count result from next right node to this count
-            count += countLeafNodesHelper(rt.getRightChild)
+            count += countLeafNodesHelper(rt.getRightChild());
 
         }
 
@@ -262,7 +262,7 @@ public class BinarySearchTree {
      */
     public int getHeight() {
         
-        if (numNodes = 0) {
+        if (numNodes == 0) {
             return -1;
         }
 
@@ -277,38 +277,38 @@ public class BinarySearchTree {
      * @param depth the depth at current point in counting
      * @return the depth at current point in counting
      */
-    public int heightHelper(TreeNode<Integer> rt, depth) {
+    public int heightHelper(TreeNode<Integer> rt,int depth) {
 
         //to compare which is the biggest, left or right
         int leftDepth = -1;
         int rightDepth = -1;
 
-        if(rt.getLeftChild == null && rt.getRightChild == null) {
-            //if it gets to the bottom, simply return the pre calculated depth
+        if(rt.getLeftChild() == null && rt.getRightChild() == null) {
+            //if it gets to the bottom, simply return the precalculated depth
             return depth;
 
         }
     
 
-        if(rt.getLeftChild != null) {
+        if(rt.getLeftChild() != null) {
 
             //goes down a level to left and adds 1 to depth
-            int leftDepth = heightHelper(rt.getLeftChild, depth + 1);
+            leftDepth = heightHelper(rt.getLeftChild(), depth + 1);
 
         }
 
     
-        if(rt.getRightChild != null) {
+        if(rt.getRightChild() != null) {
 
             //goes down a level to right and adds 1 to depth
-            int rightDepth = heightHelper(rt.getRightChild, depth + 1);
+            rightDepth = heightHelper(rt.getRightChild(), depth + 1);
 
         }
 
         //compare left and right heights to get the max
         int biggestDepth = leftDepth;
 
-        if(leftDepth < rightDepth) {biggestDepth = rightDepth};
+        if(leftDepth < rightDepth) {biggestDepth = rightDepth;}
 
         return biggestDepth;
 
@@ -319,7 +319,8 @@ public class BinarySearchTree {
      */
     public void printInorder() {
 
-        helpInorder(root)
+        helpInorder(root);
+        System.out.println();
 
     }
 
@@ -334,9 +335,9 @@ public class BinarySearchTree {
         if (!(rt == null)) {
 
             //left, root, right
-            printInorder(rt.getLeftChild());
-            System.out.println(rt.getValue() + ", ");
-            printInorder(rt.getRightChild());
+            helpInorder(rt.getLeftChild());
+            System.out.print(rt.getValue() + " ");
+            helpInorder(rt.getRightChild());
 
         }
 
@@ -347,7 +348,7 @@ public class BinarySearchTree {
      */
     public void printPreorder() {
 
-        helpPreorder(root)
+        helpPreorder(root);
 
     }
 
@@ -362,9 +363,9 @@ public class BinarySearchTree {
         if (!(rt == null)) {
 
             //root, left, right
-            System.out.println(rt.getValue() + ", ");
-            printInorder(rt.getLeftChild());
-            printInorder(rt.getRightChild());
+            System.out.println(rt.getValue() + " ");
+            helpPreorder(rt.getLeftChild());
+            helpPreorder(rt.getRightChild());
 
         }
 
@@ -390,9 +391,9 @@ public class BinarySearchTree {
         if (!(rt == null)) {
 
             //left, right, root
-            printInorder(rt.getLeftChild());
-            printInorder(rt.getRightChild());
-            System.out.println(rt.getValue() + ", ");
+            helpPostorder(rt.getLeftChild());
+            helpPostorder(rt.getRightChild());
+            System.out.println(rt.getValue() + " ");
 
         }
 
@@ -404,10 +405,10 @@ public class BinarySearchTree {
      * @param value the value to be found and deleted
      * @return the item that was deleted, null if nonexistent
      */
-    public E delete(E value) {
+    public int delete(int value) {
 
-        if (numNodes = 0) {
-            return null;
+        if (numNodes == 0) {
+            return -1;
         }
 
         //starts at root
@@ -420,44 +421,44 @@ public class BinarySearchTree {
         while (loop) {
 
             //tests if the value goes to the left or right of 'current'
-            if (value > current.getValue()) {
+            if (value <= current.getValue()) {
 
                 //if the child is null simply return null
                 if (current.getLeftChild() == null) {
 
                     loop = false;
-                    return null;
+                    return -1;
 
                 //if the left child value is occupied, test if it is value, once found delete
                 }else if(current.getLeftChild().getValue() == value) {
 
-                    loop == false;
+                    loop = false;
                     delParent = current;
-                    del = current.getLeftChild();
+                    TreeNode<Integer> del = current.getLeftChild();
                     
                     //if its a leaf node, delete it
-                    if(del.getRightChild == null && del.getLeftChild == null) {
+                    if(del.getRightChild() == null && del.getLeftChild() == null) {
                     
                         delParent.setLeftChild(null);
 
                     //if there is only one child, replace with child
-                    } else if(del.getRightChild == null) {
+                    } else if(del.getRightChild() == null) {
 
-                        delParent.setLeftChild(del.getLeftChild);
+                        delParent.setLeftChild(del.getLeftChild());
 
-                    } else if(del.getLeftChild == null) {
+                    } else if(del.getLeftChild() == null) {
 
-                        delParent.setLeftChild(del.getRightChild);
+                        delParent.setLeftChild(del.getRightChild());
 
                     //only other case is if the left node is there still
                     } else {
                         //replace del with left child and reinsert right child
-                        delParent.setLeftChild(del.getLeftChild)
-                        addNode(del.getRightChild)
+                        delParent.setLeftChild(del.getLeftChild());
+                        addNode(del.getRightChild());
 
                     }
                     numNodes--;
-                    return del.getValue;
+                    return del.getValue();
                 
                 //if nothing is found then continue
                 } else {
@@ -473,38 +474,38 @@ public class BinarySearchTree {
                 if (current.getRightChild() == null) {
 
                     loop = false;
-                    return null;
+                    return -1;
 
                 //if the right child value is occupied, test if it is value, once found delete
                 }else if(current.getRightChild().getValue() == value) {
 
-                    loop == false;
+                    loop = false;
                     delParent = current;
-                    del = current.getRightChild();
+                    TreeNode<Integer> del = current.getRightChild();
                     
                     //if its a leaf node, delete it
-                    if(del.getRightChild == null && del.getLeftChild == null) {
+                    if(del.getRightChild() == null && del.getLeftChild() == null) {
                     
                         delParent.setRightChild(null);
 
                     //if there is only one child, replace with child
-                    } else if(del.getRightChild == null) {
+                    } else if(del.getRightChild() == null) {
 
-                        delParent.setRightChild(del.getLeftChild);
+                        delParent.setRightChild(del.getLeftChild());
 
-                    } else if(del.getLeftChild == null) {
+                    } else if(del.getLeftChild() == null) {
 
-                        delParent.setRightChild(del.getRightChild);
+                        delParent.setRightChild(del.getRightChild());
 
                     //only other case is if the left node is there still
                     } else {
                         //replace del with left child and reinsert right child
-                        delParent.setRightChild(del.getLeftChild)
-                        addNode(del.getRightChild)
+                        delParent.setRightChild(del.getLeftChild());
+                        addNode(del.getRightChild());
 
                     }
                     numNodes--;
-                    return del.getValue;
+                    return del.getValue();
 
                 //if nothing is found then continue
                 } else {
@@ -518,24 +519,8 @@ public class BinarySearchTree {
         }
 
         
-
+        return -1;
 
     }
 
-    public static void main(String[] args) {
-
-        BinarySearchTree bst = new BinarySearchTree
-        bst.add(10);
-        bst.add(3);
-        bst.add(13);
-        bst.add(5);
-        bst.add(7);
-        bst.add(20);
-
-        bst.remove(3);
-        bst.remove(5);
-
-        bst.printInorder();
-        
-    }
 }
