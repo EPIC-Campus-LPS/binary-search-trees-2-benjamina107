@@ -521,4 +521,21 @@ public class BinarySearchTree {
 
 
     }
+
+    public static void main(String[] args) {
+
+        BinarySearchTree bst = new BinarySearchTree
+        bst.add(10);
+        bst.add(3);
+        bst.add(13);
+        bst.add(5);
+        bst.add(7);
+        bst.add(20);
+
+        bst.remove(3);
+        bst.remove(5);
+
+        bst.printInorder();
+        
+    }
 }
