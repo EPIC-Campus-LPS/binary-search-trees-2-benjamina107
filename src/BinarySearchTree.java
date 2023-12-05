@@ -319,6 +319,7 @@ public class BinarySearchTree<E> {
      */
     public void printInorder() {
 
+        System.out.print("Inorder: ");
         helpInorder(root);
         System.out.println();
 
@@ -348,7 +349,9 @@ public class BinarySearchTree<E> {
      */
     public void printPreorder() {
 
+        System.out.print("Preorder: ");
         helpPreorder(root);
+        System.out.println();
 
     }
 
@@ -363,7 +366,7 @@ public class BinarySearchTree<E> {
         if (!(rt == null)) {
 
             //root, left, right
-            System.out.println(rt.getValue() + " ");
+            System.out.print(rt.getValue() + " ");
             helpPreorder(rt.getLeftChild());
             helpPreorder(rt.getRightChild());
 
@@ -376,7 +379,9 @@ public class BinarySearchTree<E> {
      */
     public void printPostorder() {
 
+        System.out.print("Postorder: ");
         helpPostorder(root);
+        System.out.println();
 
     }
 
@@ -393,7 +398,7 @@ public class BinarySearchTree<E> {
             //left, right, root
             helpPostorder(rt.getLeftChild());
             helpPostorder(rt.getRightChild());
-            System.out.println(rt.getValue() + " ");
+            System.out.print(rt.getValue() + " ");
 
         }
 
