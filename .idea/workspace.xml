@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cde06c1-8483-4df7-9aba-283a057c0dd3" name="Changes" comment="~">
-      <change afterPath="$PROJECT_DIR$/src/BinarySearchTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BST.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BST.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +54,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BinarySearchTreeTest.countNodes">
+  <component name="RunManager" selected="JUnit.BinarySearchTreeTest">
+    <configuration name="BinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BST" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BinarySearchTreeTest.countLeafNodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BST" />
       <option name="PACKAGE_NAME" value="" />
@@ -97,23 +104,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchTreeTest.printInorder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BST" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="printInorder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinarySearchTreeTest" />
         <item itemvalue="JUnit.BinarySearchTreeTest.countNodes" />
         <item itemvalue="JUnit.BinarySearchTreeTest.countLeafNodes" />
         <item itemvalue="JUnit.BinarySearchTreeTest.getHeight" />
         <item itemvalue="JUnit.BinarySearchTreeTest.delete" />
-        <item itemvalue="JUnit.BinarySearchTreeTest.printInorder" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701798281414</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="~">
+      <option name="closed" value="true" />
+      <created>1701800256875</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701800256875</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -162,222 +167,222 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>511</line>
+          <line>521</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>428</line>
+          <line>438</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>431</line>
+          <line>441</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>437</line>
+          <line>447</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>440</line>
+          <line>450</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>441</line>
+          <line>451</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>449</line>
+          <line>459</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>446</line>
+          <line>456</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>444</line>
+          <line>454</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>451</line>
+          <line>461</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>453</line>
+          <line>463</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>455</line>
+          <line>465</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>458</line>
+          <line>468</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>460</line>
+          <line>470</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>461</line>
+          <line>471</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>463</line>
+          <line>473</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>464</line>
+          <line>474</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>465</line>
+          <line>475</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>468</line>
+          <line>478</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>470</line>
+          <line>480</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>472</line>
+          <line>482</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>474</line>
+          <line>484</line>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>478</line>
+          <line>488</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>480</line>
+          <line>490</line>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>481</line>
+          <line>491</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>483</line>
+          <line>493</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>484</line>
+          <line>494</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>486</line>
+          <line>496</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>487</line>
+          <line>497</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>488</line>
+          <line>498</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>491</line>
+          <line>501</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>493</line>
+          <line>503</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>496</line>
+          <line>506</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>498</line>
+          <line>508</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>500</line>
+          <line>510</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>502</line>
+          <line>512</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>504</line>
+          <line>514</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>505</line>
+          <line>515</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>507</line>
+          <line>517</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>506</line>
+          <line>516</line>
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>508</line>
+          <line>518</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>512</line>
+          <line>522</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>515</line>
+          <line>525</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinarySearchTree.java</url>
-          <line>517</line>
+          <line>527</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>

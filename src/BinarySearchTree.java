@@ -122,8 +122,6 @@ public class BinarySearchTree<E> {
 
         }
 
-        numNodes++;
-
     }
 
     /**
@@ -421,6 +419,18 @@ public class BinarySearchTree<E> {
 
         //parent of node to be deleted, to reattach the tree
         TreeNode<Integer> delParent;
+
+        if (root.getValue() == value) {
+
+            TreeNode<Integer> left = root.getLeftChild();
+            TreeNode<Integer> right = root.getRightChild();
+            root.setLeftChild(left);
+            addNode(right);
+            numNodes--;
+            return value;
+
+        }
+
 
         boolean loop = true;
         while (loop) {
