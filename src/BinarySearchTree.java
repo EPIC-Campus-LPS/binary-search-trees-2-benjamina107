@@ -422,6 +422,8 @@ public class BinarySearchTree<E> {
         //parent of node to be deleted, to reattach the tree
         TreeNode<Integer> delParent;
 
+        if (numNodes == 1 && root.getValue() == value) { root = null; numNodes--; }
+
         if (root.getValue() == value) {
 
             TreeNode<Integer> left = root.getLeftChild();
