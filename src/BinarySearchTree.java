@@ -139,6 +139,8 @@ public class BinarySearchTree<E> {
             //starts at root
             TreeNode<Integer> current = root;
 
+                if (current.getValue() == value) { return true;}
+
             boolean loop = true;
             while (loop) {
 
@@ -424,7 +426,7 @@ public class BinarySearchTree<E> {
 
             TreeNode<Integer> left = root.getLeftChild();
             TreeNode<Integer> right = root.getRightChild();
-            root.setLeftChild(left);
+            root = left;
             addNode(right);
             numNodes--;
             return value;
