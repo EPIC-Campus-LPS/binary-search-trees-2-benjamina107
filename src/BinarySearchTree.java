@@ -9,7 +9,7 @@ public class BinarySearchTree<E> {
     private int numNodes = 0;
 
     /**
-     * Adds an item to the binary search tree
+     * Adds an item to the binary tree
      * 
      * @param value the value to be added
      */
