@@ -423,7 +423,7 @@ public class BinarySearchTree<E> {
         TreeNode<Integer> delParent;
 
         if (numNodes == 1 && root.getValue() == value) { root = null; numNodes--; }
-
+//e
         if (root.getValue() == value) {
 
             TreeNode<Integer> left = root.getLeftChild();
